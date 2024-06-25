@@ -7,17 +7,19 @@ int find_min(int myArray [], int length);
 int to_find = 5;
 int count_occurences(int myArray [], int length);
 void reverse_array(int myArray[], int length);
+void sum(int myArray[], int length);
 
 int main()
 {
 // Inputs
 int myArray [] = { 2, 5, 5, 1, 8, 0 };
 
-/* Call the functions below */
+                            /********** Call the functions below **********/
 //int max = find_max(myArray, 6);
 //int min = find_min(myArray, 6);
 //int count  = count_occurences(myArray,  6);
-reverse_array(myArray, 6);
+//reverse_array(myArray, 6);
+sum(myArray,6);
 
 /* Output */
 //printf("maximum number in myArray = %d\n",max);
@@ -27,7 +29,7 @@ reverse_array(myArray, 6);
 return 0;
 }
 
-                                                /******** Function definitions *********/
+                            /*********** Function definitions **********/
 // Maximum number in array
 int find_max(int myArray [], int length)
 {
@@ -86,4 +88,22 @@ void reverse_array(int myArray[], int length)
     for (int i = 0; i < 6; i++)
         printf("%d ",myArray[i]); 
     printf("] ");
+}
+
+//Sum of values in an array
+void sum(int myArray[], int length)
+{
+    int sum = 0;
+
+    for (int i = 0; i < length; i++)
+        sum += myArray[i];
+
+    printf("\nSum of values in myArray, [ ");
+
+    for (int i = 0; i < length; i++)
+        printf("%d ",myArray[i]);
+
+    printf("] = %d\n\n", sum); 
+
+
 }
