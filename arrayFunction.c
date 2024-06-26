@@ -1,13 +1,15 @@
 /* This code contains the functions for arrays */
 #include <stdio.h>
 
-//Function declarations
+// Start function declarations
 int find_max(int myArray [], int length);
 int find_min(int myArray [], int length);
 int to_find = 5;
 int count_occurences(int myArray [], int length);
 void reverse_array(int myArray[], int length);
 void sum(int myArray[], int length);
+void avg(int myArray[], int length);
+// End function declarations
 
 int main()
 {
@@ -19,7 +21,9 @@ int myArray [] = { 2, 5, 5, 1, 8, 0 };
 //int min = find_min(myArray, 6);
 //int count  = count_occurences(myArray,  6);
 //reverse_array(myArray, 6);
-sum(myArray,6);
+//sum(myArray,6);
+avg(myArray,6);
+
 
 /* Output */
 //printf("maximum number in myArray = %d\n",max);
@@ -90,7 +94,7 @@ void reverse_array(int myArray[], int length)
     printf("] ");
 }
 
-//Sum of values in an array
+// Sum of values in an array
 void sum(int myArray[], int length)
 {
     int sum = 0;
@@ -106,4 +110,20 @@ void sum(int myArray[], int length)
     printf("] = %d\n\n", sum); 
 
 
+}
+
+// Average of values in an array
+void avg(int myArray[], int length)
+{
+   float avg = 0;
+
+    for (int i = 0; i < length; i++)
+        avg += myArray[i];
+    avg = avg/2;
+    printf("\nAverage of values in myArray, [ ");
+
+    for (int i = 0; i < length; i++)
+        printf("%d ",myArray[i]);
+
+    printf("] = %f\n\n", avg); 
 }
