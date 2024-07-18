@@ -1,0 +1,207 @@
+                                    -----NULL pointers-----
+In programming, NULL pointers are pointers which do not point to any memory location. 
+They are used to indicate that the pointer does not refer to a valid object or memory location.
+Some of the common uses of NULL pointers are:
+
+1. Initialization: When you declare a pointer variable but do not have a valid memory address to 
+assign to it initially, you can set it NULL to indicate that its not pointing to any 
+valid memory address.
+
+2. Error Handling: NULL pointer are often used to indicate errors or exceptional conditions in  
+programs.For example, if a function fails to allocate memory or encounters an error conditon, 
+it may return a NULL pointer to indicate the failure.
+
+3. Termination Condition: In data structures like linked lists and tress, 
+NULL pointers are commonly used to mark the end of a list on the absence of a child node.
+This allows you to easily traverse the data structures and know when you have reached the end. 
+
+4. Memory deallocation: After freeeing memory allocated to pointer using functions like free() in 
+languages like C or C++, it is good practice to set the pointer to NULL to avoid 
+potential issues with accessing memory that has been deallocated.
+
+5. Checking for validity: Before dereferencing a pointer, it is good practice 
+to check if it is NULL to avoid accessing invalid memory locations, 
+which can lead to program crashes or undefined behavior. 
+
+Overall, NULL pointers play a crucial role in indicating the absence of valid memory locations and 
+are commonly used for error handling, initialization, termination conditions, memory allocation, 
+and checking for validity in programming languages like C C++ and others that work with pointers.
+------------------------------------------------------------------------------------------------------
+
+Q.1 What is the size of the integer, character, double and float?
+Ans Size of int:    4 bytes (earlier it was 2 bytes in the previous architecture)
+    Size of float:  4 bytes
+    Size of double: 8 bytes
+    Size of char:   1 byte
+-------------------------------------------------------------------------------------------------------
+Q.2 What is the size of the pointer? What is the size of the integer pointer, float pointer 
+    and character pointer?
+Ans Size of the pointer is consistent for any data type. Pointer is a holder to hold the address.
+    However, it varies with the architecture.
+    4 bytes is the size of the pointer for 32 bit architecture.
+    8 bytes is the size of the pointer for 64 bit architecture.
+-------------------------------------------------------------------------------------------------------
+Q.3 What is a pointer?
+Ans It is a holder to hold the address. A pointer is really just a variable that contains an address.
+    Remember, it is a variable.
+    Pointer is just like any other variable which has a type. Means, a pointer can be an integer pointer
+    or float pointer. (It has to hold an address, but address of some type of variable)
+-------------------------------------------------------------------------------------------------------
+Q.4 What is a NULL pointer?
+Ans A NULL pointer is a special pointer that points to nowhere. That is no other pointer will be 
+    equal to Null pointer.
+    The most easier and straight forward way to get a NULL pointer in your program is to use the 
+    predefined constant NULL, which is defined by several header files including <stdio.h> <stdlib.h>
+    and <string.h>
+
+    The NULL is a macro defined in C. NULL pointer actually means a pointer that does not point to any
+    valid location. We define a pointer to be NULL when we want to make sure that the pointer does not
+    point to any valid location and not to use that pointer to change anything. If we do not use NULL
+    pointer, then we cannot verify whether this pointer points to any valid location or not.
+
+    Example: // NULL pointer
+
+    #include <stdio.h>
+
+    int main()
+    {
+        int *p;
+        p = NULL;
+
+        printf("\n The value of P is %u", p);
+
+        return 0;
+    }
+
+    output:
+    The value of P is 0
+-------------------------------------------------------------------------------------------------------
+Q.5 What is a void pointer? What is its limitation?
+Ans A void pointer is a special type of pointer. It can point to any data type, from an 
+    integer value to float to anything! Its sole limitation is that it can be referenced direclty. 
+    ('*' cannot be used on them as the length is always undetermined.)
+    Therefore, type casting is required and must be used to turn the void pointer to a pointer of a 
+    concrete data type to which we can refer. An example would be helpful.
+
+    #include <stdio.h>
+    int main()
+    {
+        int a = 5;
+        double b = 3.233;
+        void *vp; // void pointer declaration
+
+        vp = &a;
+        printf("\n a = %d", *((int*)vp));
+        vp = &b;
+        printf("\n b = %f", *((double*)vp));
+
+        return 0;
+    }
+
+    Output:
+    a = 5
+    b = 3.233
+-------------------------------------------------------------------------------------------------------
+Q.6 What is an ISR? (Interrupt Service Routine)
+Ans It is an Interrupt Handler. It means, it shall be called the moment an interrupt is encountered.
+        An interrupt occurs.
+        Immediate reaction is - call the subroutine corresponding to the interrupt.
+        That subroutine is called ISR.
+    An ISR (Interrupt Service Routine) is an interrupt handler, a callback subroutine which is called
+    when a interrupt is encountered.
+-------------------------------------------------------------------------------------------------------
+Q.7 What is a return type of ISR?
+Ans ISR does not return anything. Means, there is no return. Also, there is no one to read the 
+    returned value. 
+    An ISR returns nothing because there is no caller in the code to read the returned values.
+-------------------------------------------------------------------------------------------------------
+Q.8 What is Latency? What is interrupt latency?
+Ans Latency means delay. Interrupt latency is the time required for the interrupt to be responded.
+    i.e. the time required for the ISR to respond to an interrupt.
+
+    Interrupt latency can be minimized by writing short ISR routine and by not delaying interrupts
+    for more time.
+-------------------------------------------------------------------------------------------------------
+Q.9 What is the use of volatile keyword?
+Ans The C's volatile keyword is a qualifier that tells the compiler not to optimize when applied
+    to a variable. By declaring a variable volatile, we can tell the compiler that the value 
+    of the variable may change any moment from outside of the scope of the program. 
+
+    A variable should be declared volatile whenever its value could change unexpectedly and beyond
+    the comprehension of the compiler. In those cases it is required not to optimize the code, doing
+    so may lead to erroneous result and load the variable every time it is used in the program.
+
+    Volatile keyword is useful for memory mapped peripheral registers, global variables modified by 
+    interrupt service routine, global variables accessed by multiple tasks within a multi-threaded 
+    application.
+-------------------------------------------------------------------------------------------------------
+Q.10 Can a variable be both const and volatile?
+Ans  The const keywords make sure that the value of the variable declared as const cannot be changed.
+     This statement holds true in the scope of the program. The value can still be changed by outside 
+     intervention. So, the use of const with volatile makes perfect sense.
+
+     Yes, a variable can be both const and volatile in C. This combination is used in 
+     embedded systems programming to represent a read-only hardware register whose value 
+     can change unexpectedly, for instance, due to hardware events.
+
+     Explanation
+     const: This keyword indicates that the variable is read-only, and its value cannot be 
+     modified by the program.
+     volatile: This keyword tells the compiler that the value of the variable may change at any time, 
+     without any action being taken by the code the compiler finds nearby.
+     This prevents the compiler from optimizing the code by assuming the value remains constant.
+
+     Use Case
+     A common use case for a const volatile variable is when dealing with hardware registers. 
+     For example, a status register that is updated by hardware but should not be modified by 
+     the program.
+
+     Example
+     Here's an example to illustrate the use of a const volatile variable:
+
+     #include <stdio.h>
+
+     // Assuming the hardware register is located at this address
+     #define STATUS_REGISTER ((const volatile uint8_t*)0x40004000)
+
+     int main() {
+         // Read the status register
+         uint8_t status = *STATUS_REGISTER;
+
+         // Print the status
+         printf("Status register value: %u\n", status);
+
+        return 0;
+        }
+-------------------------------------------------------------------------------------------------------
+Q.11 Can a pointer be voltile?
+Ans  If wee see the declaration volatile int *p, it means that the pointer itself is not volatile
+     and points to an integer that is volatile. This is to inform the compiler that pointer p is 
+     pointing to an integer and the value of that integer may change unexpectedly.
+-------------------------------------------------------------------------------------------------------
+Q.12 Can we use any functions inside ISR?
+Ans  We can use functions inside ISR as long as that function is not invoked from other portion of the 
+     code.
+-------------------------------------------------------------------------------------------------------
+Q.13 Can we use printf function inside ISR?
+Ans  printf function in ISR is not supported because printf function is not reentrant, thread safe and 
+     uses dynamic memory allocation which takes a lot of time and can affect the speed of an ISR up to a 
+     great extent.
+-------------------------------------------------------------------------------------------------------
+Q.14 Can we put breakpoint inside ISR?
+Ans  Putting a breakpoint inside ISR is not a good idea because debugging will take some time and a 
+     difference of half or more second will lead to different behavior of hardware. 
+     To debug ISR, definitive logs are better.
+------------------------------------------------------------------------------------------------------- 
+Q.15 Can static varible be declared in a header file?
+Ans  A static variable cannot be declared without defining it. A static variable can be defined in the 
+     header file. But doing so, the result will be having a private copy of that variable in each source 
+     file which includes the header file. So it will be wise not declare a static variable in header file,
+     unless you are dealing with a  different scenario.
+-------------------------------------------------------------------------------------------------------
+Q.16 Is count down to zero loops better than count up loops?
+Ans  Count down to zero loops are better. Reason is - at loop termination, comparison to zero can be optimized
+     by the compiler. Most processors have instruction for comparing to zero. So they don't need to load the 
+     variable and the maximum value, subtract them and then compare to zero. That is why count down to zero loops
+     are better.
+-------------------------------------------------------------------------------------------------------

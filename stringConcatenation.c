@@ -21,6 +21,7 @@ int main ()
     printf("\ns: %s\n\n", s);
     free(s); // Free memory after use 
 
+    // Function call to change the uppercase letter to lowercase letter
     char s3[] = "FahRukh";
     char s4[] = "khan";
     

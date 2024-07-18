@@ -1,14 +1,18 @@
 /* This code contains the functions for arrays */
 #include <stdio.h>
+#include <stdlib.h>
 
 // Start function declarations
 int find_max(int myArray [], int length);
 int find_min(int myArray [], int length);
+
 int to_find = 5;
 int count_occurences(int myArray [], int length);
+
 void reverse_array(int myArray[], int length);
 void sum(int myArray[], int length);
 void avg(int myArray[], int length);
+int *array_copy(int *array, int length);
 // End function declarations
 
 int main()
@@ -24,6 +28,11 @@ int myArray [] = { 2, 5, 5, 1, 8, 0 };
 //sum(myArray,6);
 avg(myArray,6);
 
+// Copy the array of elements
+int a1[] = {1, 2, 3, 4, 5};
+int *a1_copy = array_copy(a1, 5);
+for (int i = 0; i < 5; i++)
+    printf("a1_copy[%d] = [%d]\n", i, a1_copy[i]);
 
 /* Output */
 //printf("maximum number in myArray = %d\n",max);
@@ -126,4 +135,15 @@ void avg(int myArray[], int length)
         printf("%d ",myArray[i]);
 
     printf("] = %f\n\n", avg); 
+}
+
+// Copy the array elements into another array
+int *array_copy(int *array, int length)
+{
+    int *c = malloc(length * sizeof(int));
+
+    for ( int i =0; i < length; i++)
+        c[i] = array[i];
+    
+    return c;
 }

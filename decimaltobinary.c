@@ -21,7 +21,8 @@ void decimalToBinary(unsigned int n) {
 
 int main() {
     unsigned int number = 33;
-    printf("Binary representation of %u is: ", number);
+    printf("\nBinary representation of %u is: ", number);
     decimalToBinary(number);
+    printf("\n");
     return 0;
 }
