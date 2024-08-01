@@ -3,8 +3,8 @@ In programming, NULL pointers are pointers which do not point to any memory loca
 They are used to indicate that the pointer does not refer to a valid object or memory location.
 Some of the common uses of NULL pointers are:
 
-1. Initialization: When you declare a pointer variable but do not have a valid memory address to 
-assign to it initially, you can set it NULL to indicate that its not pointing to any 
+1. Initialization: When we declare a pointer variable but do not have a valid memory address to 
+assign to it initially, we can set it NULL to indicate that its not pointing to any 
 valid memory address.
 
 2. Error Handling: NULL pointer are often used to indicate errors or exceptional conditions in  
@@ -15,13 +15,12 @@ it may return a NULL pointer to indicate the failure.
 NULL pointers are commonly used to mark the end of a list on the absence of a child node.
 This allows you to easily traverse the data structures and know when you have reached the end. 
 
-4. Memory deallocation: After freeeing memory allocated to pointer using functions like free() in 
-languages like C or C++, it is good practice to set the pointer to NULL to avoid 
-potential issues with accessing memory that has been deallocated.
+4. Memory deallocation: After freeing memory allocated to pointer using functions like free() in languages 
+like C or C++, it is good practice to set the pointer to NULL to avoid potential issues with 
+accessing memory that has been deallocated.
 
-5. Checking for validity: Before dereferencing a pointer, it is good practice 
-to check if it is NULL to avoid accessing invalid memory locations, 
-which can lead to program crashes or undefined behavior. 
+5. Checking for validity: Before dereferencing a pointer, it is good practice to check if it is NULL 
+to avoid accessing invalid memory locations, which can lead to program crashes or undefined behavior. 
 
 Overall, NULL pointers play a crucial role in indicating the absence of valid memory locations and 
 are commonly used for error handling, initialization, termination conditions, memory allocation, 
@@ -78,7 +77,7 @@ Ans A NULL pointer is a special pointer that points to nowhere. That is no other
 -------------------------------------------------------------------------------------------------------
 Q.5 What is a void pointer? What is its limitation?
 Ans A void pointer is a special type of pointer. It can point to any data type, from an 
-    integer value to float to anything! Its sole limitation is that it can be referenced direclty. 
+    integer value to float to anything! Its sole limitation is that it can be referenced directly. 
     ('*' cannot be used on them as the length is always undetermined.)
     Therefore, type casting is required and must be used to turn the void pointer to a pointer of a 
     concrete data type to which we can refer. An example would be helpful.
@@ -196,7 +195,7 @@ Ans  Putting a breakpoint inside ISR is not a good idea because debugging will t
 Q.15 Can static varible be declared in a header file?
 Ans  A static variable cannot be declared without defining it. A static variable can be defined in the 
      header file. But doing so, the result will be having a private copy of that variable in each source 
-     file which includes the header file. So it will be wise not declare a static variable in header file,
+     file which includes the header file. So it will be wise not to declare a static variable in header file,
      unless you are dealing with a  different scenario.
 -------------------------------------------------------------------------------------------------------
 Q.16 Is count down to zero loops better than count up loops?
@@ -205,3 +204,215 @@ Ans  Count down to zero loops are better. Reason is - at loop termination, compa
      variable and the maximum value, subtract them and then compare to zero. That is why count down to zero loops
      are better.
 -------------------------------------------------------------------------------------------------------
+Q.17 What is the difference between I2C and SPI communication?
+Ans  I2C stands for Inter-Integrated Circuit. I2C is a simple two-wire protocol used to communicate between 
+     two devices or chips in an embedded system. I2C has two lines SCL (Serial Clock Line) and 
+     SDA (Serial Data Line), SCL is used for clock and SDA is used for data.
+
+     SPI stands for Serial Peripheral Interface. SPI is a four-wire serial communication protocol. SPI follows 
+     master-slave architecture. The four lines of SPI are MOSI, MISO, SCL and SS. SCL is a serial clock that is 
+     used for entire data communication. Slave Select (SS) is used to select the slave. 
+     Master Out Slave In (MOSI) is the output data from the master and Master In Slave Out (MISO) is the 
+     input data line for the Master.
+
+     Differences:
+
+     -> I2C is half-duplex communication and SPI is a full-duplex communication.
+     -> I2C supports multi-master and multi-slave architecture whereas, SPI supports single-master multiple slaves 
+        architecture.
+     -> I2C is a two wire protocol and SPI is a four wire protocol.
+     -> I2C supports clock stretching and SPI does not have clock stretching.
+     -> I2C is slower than SPI.
+     -> I2C has an extra overhead start and stop bits and SPI does not have any start and stop bits.
+     -> I2C has a pull up resistor requirement.
+
+     Advantages of I2C: Easy device add-on - it is easy to add new device to the bus. Just add the new device 
+                        without adding a new slave select, unlike SPI.
+
+     Advantages of SPI: Speed - SPI can support speed upto 10 MB/s however I2C in the ultra fast mode can 
+                        support only 5 MB/s.
+-------------------------------------------------------------------------------------------------------
+Q.18 What are storage classes in C?
+Ans  There are 4 storage classes in C: Auto, Static, Extern and Register.
+  -> Auto: This is the default storage class for all the variables declared inside a function or a block. 
+     Hence, the keyword auto is rarely used while writing programs in C language. Auto variables can be only 
+     accessed within the block/function they have been declared and not outside them (which defines their scope). 
+     Of course, these can be accessed within nested blocks within the parent block/function in which the 
+     auto variable was declared. However, they can be accessed outside their scope as well using the concept of 
+     pointers given here by pointing to the very exact memory location where the variables reside. They are 
+     assigned a garbage value by default whenever they are declared.  
+
+  -> Static: This storage class is used to declare static variables which are popularly used while writing 
+     programs in C language. Static variables have the property of preserving their value even after they are 
+     out of their scope! Hence, static variables preserve the value of their last use in their scope. 
+     So we can say that they are initialized only once and exist till the termination of the program. 
+     Thus, no new memory is allocated because they are not re-declared.
+
+     Their scope is local to the function to which they were defined. Global static variables can be accessed 
+     anywhere in the program. By default, they are assigned the value 0 by the compiler. 
+     
+  -> Extern: Extern storage class simply tells us that the variable is defined elsewhere and not within the 
+     same block where it is used. Basically, the value is assigned to it in a different block and this can be 
+     overwritten/changed in a different block as well. So an extern variable is nothing but a global variable 
+     initialized with a legal value where it is declared in order to be used elsewhere. It can be accessed within 
+     any function/block.
+
+     Also, a normal global variable can be made extern as well by placing the ‘extern’ keyword before its 
+     declaration/definition in any function/block. This basically signifies that we are not initializing a 
+     new variable but instead, we are using/accessing the global variable only. The main purpose of using extern 
+     variables is that they can be accessed between two different files which are part of a large program.
+     
+  -> Register: This storage class declares register variables that have the same functionality as that of the 
+     auto variables. The only difference is that the compiler tries to store these variables in the register 
+     of the microprocessor if a free register is available. This makes the use of register variables to be much 
+     faster than that of the variables stored in the memory during the runtime of the program.
+
+     If a free registration is not available, these are then stored in the memory only. Usually, a few variables 
+     which are to be accessed very frequently in a program are declared with the register keyword which improves 
+     the running time of the program. An important and interesting point to be noted here is that we cannot 
+     obtain the address of a register variable using pointers.
+
+-------------------------------------------------------------------------------------------------------
+Q.19 What is a watchdog timer? Why do we need to reset the watchdog timer?
+Ans  A watchdog timer(WDT) is a hardware timer used in embedded systems to detect and recover from software 
+     malfuncitons. It acts as a safety mechanism that helps ensure the system remains operational, even if the 
+     software encounters an error or gets stuck in a infinite loop. 
+     How a watchdog timer works:
+     1. Initialization: The watchdog timer is configured  to a specific timeout period by the software.
+                        This period should be long enough to allow normal operation but short enough to 
+                        detect malfuncitons promptly.
+     2. Regular Resets: The software must periodically reset the watchdog timer (often called "kicking" or 
+                        "feeding" the watchdog) to prevent it from timing out. This reset is typically done 
+                        within the main program loop or critical points in the code.
+     3. Timeout and Reset: The software must periodically set the watchdog timer within the specified period 
+                           (indicating a potential malfunction and software hang), the watchdog timer will time out 
+                           and trigger a system reset or other predefined recovery actions.
+
+-------------------------------------------------------------------------------------------------------
+Q.20 What is the use of size_t?
+Ans  The 'size_t' type in C programming is an unsigned integral type used to represent sizes of objects and 
+     is the preferred type for array indexing and loop counters when dealing with sizes and counts that are 
+     non-negative. It is defined in the '<stddef.h>' header file and also in '<stdio.h>'.
+
+-------------------------------------------------------------------------------------------------------
+                                        MATLAB-Specific Questions
+
+Q.1 How do you define and manipulate matrices in MATLAB?
+Ans In MATLAB, matrices can be defined using square brackets. For example, A = [1, 2; 3, 4] creates a 
+    2x2 matrix. You can manipulate matrices using operations like addition, subtraction, multiplication, 
+    and division. Functions such as transpose(A), inv(A) for inversion, and det(A) for determinant are 
+    also commonly used.
+
+-------------------------------------------------------------------------------------------------------
+Q.2 Can you explain how to use cell arrays and structures in Matlab?
+Ans Cell arrays are used to store data of varying types and sizes. For example, 
+    C = {1, 'text', [1, 2, 3]}. You can access cell elements using curly braces, like C{2}. 
+    Structures are used to group related data using named fields, e.g., S.name = 'John'; S.age = 30;. 
+    Fields are accessed using dot notation, like S.name.
+
+-------------------------------------------------------------------------------------------------------
+Q.3 What are the different data types present in Matlab?
+Ans MATLAB supports several data types, including:
+    Numeric types: double, single, int8, uint8, int16, uint16, int32, uint32, int64, uint64
+    Logical type:  logical
+    Characters and strings: char, string
+    Fixed-point: fi (requires Fixed-Point Designer)
+    Complex numbers, cell arrays, structures, function handles, tables, categorical arrays, datetime, 
+    duration, and calendarDuration.
+
+-------------------------------------------------------------------------------------------------------
+Q.4 How do you handle overflow when multipying an 'uint8_t' value with a single value?
+Ans To handle overflow, you can either cast the result back to the desired type with appropriate handling 
+    or use fixed-point arithmetic to manage precision and range. For example:
+    a = uint8(200);
+    b = single(2.5);
+    result = a * b;
+    result_uint8 = uint8(min(max(result, 0), 255));  % Clamping the result to uint8 range
+
+-------------------------------------------------------------------------------------------------------
+Q.5 What is the difference between a function and a script?
+Ans A script is a file containing a sequence of Matlab commands that are executed together. It does not
+    accept input arguments or return outputs. A function, on the other hand, is defined using 'function' 
+    keyword, can accept input arguments and return outputs. Funtions have their own workspace separate 
+    base workspace.
+
+-------------------------------------------------------------------------------------------------------
+Q.6 How do you create and use anonymous functions in Matlab?
+Ans Anonymous functions are defined using the '@' symbol. For example:
+    f = @(x) x^2 + 2*x + 1;
+    y = f(3);  % Evaluates to 16
+
+-------------------------------------------------------------------------------------------------------
+Q.7 Describe how you would implement error handling in Matlab code.
+Ans Error handling in MATLAB is implemented using try, catch blocks. For example:
+    try
+        result = riskyOperation();
+    catch ME
+        disp('An error occurred');
+        disp(ME.message);
+    end
+
+-------------------------------------------------------------------------------------------------------
+Q.8 How do you optimize the performance of Matlab code?
+Ans To optimize MATLAB code, you can:
+    -> Preallocate arrays to avoid dynamic resizing.
+    -> Use vectorized operations instead of loops.
+    -> Use built-in functions, which are often optimized.
+    -> Profile the code to identify bottlenecks using the profile function.
+    -> Avoid using global variables as they slow down performance.
+
+-------------------------------------------------------------------------------------------------------
+Q.9 Explain how you would profile Matlab code to identify performance bottlenecks.
+Ans Use the profile function to start profiling, run the code, and then use profile viewer to inspect 
+    the results. For example:
+
+    profile on;
+    myFunction();
+    profile off;
+    profile viewer;
+-------------------------------------------------------------------------------------------------------
+Q.10 What are some commonly used Matlab toolboxes in embedded systems development?
+Ans  Some commonly used toolboxes in embedded systems development include:
+     Simulink:             For model-based design and simulation.
+     Fixed-Point Designer: For designing and simulating fixed-point systems.
+     Embedded Coder:       For generating C code from Simulink models.
+     Stateflow:            For designing state machines and control logic.
+------------------------------------------------------------------------------------------------------- 
+Q.11 How do you create and simulate a basic model in simulink?
+Ans  In simulink, you create models by dragging and dropping blocks from the Simulink library browser 
+     into a model window. Connect the blocks using signal lines to define the flow of data. To simulate 
+     the model, configure the simulation parameters and click "Run" button.
+
+------------------------------------------------------------------------------------------------------- 
+Q.12 What is model-based development and how it is used in simulink?
+Ans  Model based development involves creating a graphical model that represents the system. Simulink 
+     is used design, simulate and test these models. This approach allows for early verification and 
+     validation and it can automatically generate code for the embedded system.  
+
+------------------------------------------------------------------------------------------------------- 
+Q.13 Explain the use of Stateflow tool in Simulink.
+Ans  Stateflow is used to design and simulate state machines and control logic. It provides a graphical
+     interface for modeling reactive systems, enabling the design of complex logic using states, transitions,
+     events and actions.
+
+------------------------------------------------------------------------------------------------------- 
+Q.14 How do you perform Hardware-in-Loop (HIL) testing in Simulink?
+Ans  HIL testing involves running a real-time simulation of the system on a target hardware platform.
+     Simulink models are used to create the simulation, and tools like Simulink Real Time are used to 
+     deploy the model to real-time hardware. This allows for testing the control algorithms with real 
+     hardware inputs and outputs.
+
+------------------------------------------------------------------------------------------------------- 
+Q.15 How do you use Matlab scripts to automate the Simulink simulations?
+Ans  Matlab scripts can be used to automate Simulink simulations by using commands like 'sim' to run the
+     simulation programmatically. For example:
+     
+     load_system('myModel');
+     sim('myModel');
+
+------------------------------------------------------------------------------------------------------- 
+Q.16 What is the role of configuration parameters in Simulink models?
+Ans  Configuration parameters in Simulink models define the settings for simulation, code generation and 
+     data logging. They control aspects like solver options, optimization settings, hardware implementation
+     settings, and data import/export configurations.
+

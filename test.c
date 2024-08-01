@@ -2,7 +2,7 @@
 
 int main()
 {
-    int x = 5,y;
+    //int x = 5,y;
 
     /*
     In C, local variables (such as y in this case) are not automatically initialized. 
@@ -15,12 +15,15 @@ int main()
     The <garbage value> represents some arbitrary integer that happens to be 
     in the memory location assigned to y.
     */
+
+   /*
     printf("\n\ny = %d\n",y);
 
     int arr[10];
 
     for (int i = 0; i <= 10; i++)
         printf("\n\ny = %d\n",arr[i]);
+*/
 
     return 0;
 }
