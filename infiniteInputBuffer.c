@@ -31,7 +31,8 @@ int main (void)
    while(true)
    {
 
-    if (num_data == size) // condition to increase the size of the buffer, if the size of the buffer reaches to 2
+    if (num_data == size) 
+    // condition to increase the size of the buffer, if the size of the buffer reaches to 2
     {
         size *= 2;
         buffer = realloc(buffer, sizeof(int)*size); // reallocation of the memory
@@ -39,7 +40,8 @@ int main (void)
     printf("Enter data (-1 to quit):\n");
     scanf("%d", &input);
 
-    if (input == -1) break; // since this is an infinite loop if input is -1, we will come out of the loop
+    if (input == -1) break; 
+    // since this is an infinite loop if input is -1, we will come out of the loop
     else buffer[num_data] = input;
 
     num_data++;

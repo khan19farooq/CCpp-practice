@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 // Start function declarations
 int find_max(int myArray [], int length);
 int find_min(int myArray [], int length);
@@ -14,6 +15,7 @@ void sum(int myArray[], int length);
 void avg(int myArray[], int length);
 int *array_copy(int *array, int length);
 // End function declarations
+///////////////////////////////////////////////////////////////////////
 
 int main()
 {
@@ -28,8 +30,8 @@ int myArray [] = { 2, 5, 5, 1, 8, 0 };
 //sum(myArray,6);
 avg(myArray,6);
 
-// Copy the array of elements
-int a1[] = {1, 2, 3, 4, 5};
+/**  Start - Function call to copy the array of elements */
+int a1[] = {1, 2, 4, 4, 5};
 int *a1_copy = array_copy(a1, 5);
 for (int i = 0; i < 5; i++)
     printf("a1_copy[%d] = [%d]\n", i, a1_copy[i]);
@@ -142,7 +144,7 @@ int *array_copy(int *array, int length)
 {
     int *c = malloc(length * sizeof(int));
 
-    for ( int i =0; i < length; i++)
+    for ( int i = 0; i < length; i++)
         c[i] = array[i];
     
     return c;

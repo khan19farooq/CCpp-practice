@@ -416,3 +416,99 @@ Ans  Configuration parameters in Simulink models define the settings for simulat
      data logging. They control aspects like solver options, optimization settings, hardware implementation
      settings, and data import/export configurations.
 
+-------------------------------------------------------------------------------------------------------
+                                        Behavioral Questions
+
+Q.1 Explain your work in DSP in Matlab?
+Ans During my Master's program, I took DSP I & II courses and worked on a project titled "Challenges in 
+    Signal Processing for Fetal Phonocardiogram". The objective of this project was to reduce the noise 
+    in signals from fetal heart sounds and maternal heart sounds. To achieve this, I utilized Matlab and
+    Simulink to develop scripts that implemented spectral subtraction and Weiner filtering methods.
+
+    Using Matlab and Simulink's DSP toolboxes, which offer extensive features for signal processing, 
+    I was able to create a robust algorithm that effectively reduced noise and provided clear output 
+    results. This experience underscored the power and versalitity of Matlab and Simulink in handling 
+    complex signal and system challenges.
+
+    Recently, I worked on reducing noise in ADC (Analog to Digital converter) signals using digital 
+    signal processing (DSP) techniques. ADC signals often contain noise that can interfere with the
+    accuracy and reliability of the data being processed. To address this, I employed various filtering 
+    methods to clean the signals and enhance their quality.
+
+-------------------------------------------------------------------------------------------------------
+Q.2 Introduce yourself.
+Ans Hello my name is Farooq Khan. I recently worked as an Embedded Software Engineer at Baxter's 
+    Batesville R&D facility, where I gained over four years of experience in the medical device industry.
+    My background includes developing and testing embedded software for various medical devices, ensuring
+    compliance with regulatory standards like FDA and IEC 62304, and collaborating with cross-functional 
+    teams to deliver high-quality products.
+
+    At Baxter, I was responsible for product verification testing, root cause analysis, and developing 
+    software for drive control systems, among other tasks.Unfortuantely, due to a company-wide 
+    restructuring, my position was impacted, and I was laid off. However, this has given me an opportunity  
+    to seek new challenges and bring my expertise to a new organization.
+
+    I am particularly excited about this role at Cummins because of your commitment to innovation and 
+    quality, which aligns with my professional values and  experience. I am eager to contribute my skills 
+    in Embedded systems and problem-solving to help drive your projects forward and deliver outstanding 
+    results.
+
+-------------------------------------------------------------------------------------------------------
+Q.3 How do you solve a problem?
+Ans I approach problem-solving systematically by following a structured process that involves understanding
+    the problem, analyzing the possible causes, brainstorming potential solutions, implementing the best 
+    solution, and reviewing the results.
+
+    For example, in one of my recent projects, we encountered a critical issue with the drive control
+    board on a medical bed that was causing inconsistent motor speeds, potentially compromising patient
+    safety. Here's how I addressed the problem:
+
+    1. Understand the problem: I started by gathering detailed information about the issue. I reviewed 
+                               the system logs, spoke with hardware engineers and replicated the problem 
+                               in a controlled environment to observe its behavior.
+
+    2. Analyze the Causes: Using the data collected, I performed a root cause analysis. I ulitized tools 
+                           like oscilloscopes and multimeters to diagnose electrical signals and identified
+                           that the issue was related to noise interference affecting the speed control signal.
+
+    3. Brainstorming Solutions: I collaborated with the team to brainstorm potential solutions. We considered
+                                several approaches, including improving the shielding of the control signal,
+                                updating the software filter algorithms, and adjusting the hardware input.
+    
+    4. Implement the Solution: After evaluating the pros and cons of each option, we decided to update the 
+                               software filter algorithm to better handle noise interferences. I coded the
+                               new filter, tested it in isolation, and then intergrated into the system.
+    
+    5. Review the Results: After implementation, I conducted extensive testing to ensure the issue was 
+                           resolved. We ran the bed through various scenarious to confirm the motor speeds 
+                           were consitent and reliable. The solution was effective, and the problem did not
+                           reoccur. 
+    
+    This structured approach allowed us to identify and resolve the issue efficiently, ensuring the device
+    met safety and performance standards. By involving the team and using a combination of analytical and
+    practical methods, we were able to implement a robust solution. 
+
+    In summary, my problem-solving process involves thorough understanding, detailed analysis, collaborative 
+    brainstorming, effective implementation, and rigorous review. This approach ensures that I address 
+    problems comprehensively and deliver reliable solutions. 
+
+-------------------------------------------------------------------------------------------------------
+Q.4 How will you handle pressure?
+Ans I handle pressure by staying organized, maintaining a positive attitude, and focusing on solutions rather
+    than problems. I believe that pressure is an inevitable part of any challenging job, and it's important to 
+    approach it methodically.
+
+    For example, during a critical phase of a project at Jabil, we faced an unexpected issue with the software
+    for a hemodialysis machine that needed to be resolved quickly to meet our regulatory deadline. The
+    pressure was high as the deadline was non-negotiable and the impact on patients' safetly was significant.
+
+    To handle the situation, I first prioritized tasks by breaking down the problem into smaller, manageable parts. 
+    I organized a team meeting to clearly communicate the issue and delegate responsibilities based on each team 
+    member's strengths. This ensured that everyone knew their role and could work efficiently.  
+
+-------------------------------------------------------------------------------------------------------
+Q.5 Why Cummins?
+Ans I am particularly drawn to Cummins because of its reputation as a leader in innovative and sustainable 
+    power solutions. The company's commitment to reducing emissions and advancing clean energy technologies
+    resonates deeply with my professional and personal values. I am passionate about contributing to a 
+    future where power generation is both efficient and environmentally responsible.

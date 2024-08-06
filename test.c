@@ -2,8 +2,15 @@
 
 int main()
 {
-    //int x = 5,y;
+    /*
+    int x = 5,y;
+    printf("\n\ny = %d\n",y);
 
+    int arr[10];
+
+    for (int i = 0; i <= 10; i++)
+        printf("\n\ny = %d\n",arr[i]);
+    */
     /*
     In C, local variables (such as y in this case) are not automatically initialized. 
     If you do not explicitly initialize them, they contain indeterminate values 
@@ -16,14 +23,6 @@ int main()
     in the memory location assigned to y.
     */
 
-   /*
-    printf("\n\ny = %d\n",y);
 
-    int arr[10];
 
-    for (int i = 0; i <= 10; i++)
-        printf("\n\ny = %d\n",arr[i]);
-*/
-
-    return 0;
 }
