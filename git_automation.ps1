@@ -11,4 +11,4 @@ git add .
 git commit -m $commitMessage
 
 # Push the changes to the remote repository
-git push origin main
+git push origin dev
