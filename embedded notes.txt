@@ -355,7 +355,7 @@ Ans Error handling in MATLAB is implemented using try, catch blocks. For example
 -------------------------------------------------------------------------------------------------------
 Q.8 How do you optimize the performance of Matlab code?
 Ans To optimize MATLAB code, you can:
-    -> Preallocate arrays to avoid dynamic resizing.
+    -> Pre-allocate arrays to avoid dynamic resizing.
     -> Use vectorized operations instead of loops.
     -> Use built-in functions, which are often optimized.
     -> Profile the code to identify bottlenecks using the profile function.
@@ -392,8 +392,8 @@ Ans  Model based development involves creating a graphical model that represents
 ------------------------------------------------------------------------------------------------------- 
 Q.13 Explain the use of Stateflow tool in Simulink.
 Ans  Stateflow is used to design and simulate state machines and control logic. It provides a graphical
-     interface for modeling reactive systems, enabling the design of complex logic using states, transitions,
-     events and actions.
+     interface for modeling reactive systems, enabling the design of complex logic using states, 
+     transitions, events and actions.
 
 ------------------------------------------------------------------------------------------------------- 
 Q.14 How do you perform Hardware-in-Loop (HIL) testing in Simulink?
@@ -427,7 +427,7 @@ Ans During my Master's program, I took DSP I & II courses and worked on a projec
 
     Using Matlab and Simulink's DSP toolboxes, which offer extensive features for signal processing, 
     I was able to create a robust algorithm that effectively reduced noise and provided clear output 
-    results. This experience underscored the power and versalitity of Matlab and Simulink in handling 
+    results. This experience underscored the power and versatility of Matlab and Simulink in handling 
     complex signal and system challenges.
 
     Recently, I worked on reducing noise in ADC (Analog to Digital converter) signals using digital 

@@ -13,8 +13,9 @@ int main(void)
     }
 
     strcpy(buffer, "subscribe");
-
-    buffer = realloc(buffer, strlen(buffer) + 2); // 2 account for the null terminator and the character that we want to append
+   
+    buffer = realloc(buffer, strlen(buffer) + 2); 
+    // 2 account for the null terminator and the character that we want to append
 
     if(buffer == NULL)
     {
