@@ -23,6 +23,10 @@ int main()
     in the memory location assigned to y.
     */
 
+int foo = 1;
+int bar = foo++;
 
+printf("bar: %d,foo: %d",bar, foo);
+return 0;
 
 }

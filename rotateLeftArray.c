@@ -19,8 +19,10 @@ value 3  4  5  6  7  2         value 7  2  3  4  5  6
 
 int arr1[] = {2,3,4,5,6,7};
 int length = sizeof(arr1)/sizeof(arr1[0]);
+
 printf("\nlength of array: %d\n\n",length);
 printf("Array before rotating: ");
+
 for (size_t i = 0; i<length; i++)
     printf("%d ",arr1[i]);
 
