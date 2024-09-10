@@ -1,4 +1,4 @@
-Power Electronics fundamentals
+-------------------------------------------------Power Electronics fundamentals----------------------------------------------------------
 
 Q.1 What are power electronics devices?
 ans Electronic devices that are directly used in power processing circuits to convert or convert eletric power. 
@@ -82,3 +82,60 @@ ans Some of the reasons we use a ground plane on the PCB are as follows:
     Overall, a ground plane is an effective and widely used strategy in PCB design to enhance electrical performance, 
     reliability, and manufacturability.                                                                                                                                     
 
+Q.6 What is Power Factor? How can we correct it?
+ans Power Factor Correction(PFC) is a technique to improve the power factor of an electrical system. Power Factor is the ratio
+    of real power (used for doing work) to apparent power (the product of the voltage and current in the system). 
+    It is expressed as value between 0 and 1 and often represented as a percentage.
+
+    Key concepts:
+    -> Power Factor - It is defined as Power Factor = Real Power (P) / Apparent Power (S), where real power is measured in watts (W)
+                      and apparent power is measured in volt-amperes (VA). 
+                      It is also equals the cosine of the phase angle (cos(phi)) between the current and the voltage waveforms in an 
+                      AC circuit.
+
+    -> Correction Objective: The goal of PFC is to bring the power factor close to 1 (100%), which means that the electrical power is 
+                             used more efficiently. A power factor of 1 implies that all the power supplied by the electrical system 
+                             is being used effectively for work.
+
+    -> Why it matters: Poor power factor (typically less than 0.9) can lead to increased losses in the electrical distribution system,
+                       higher utility bills, and the need for larger capacity transformers and generators. Improving the power factor
+                       can reduce these losses and operational costs.
+    
+    Methods of Power Factor Correction:
+
+    -> Capacitors: Capacitors are commonly used to counteract the inductive effects of inductive loads (like motors and transformers). 
+                   They provide leading reactive power to offset the lagging reactive power of inductive loads, thereby improving the 
+                   power factor.
+
+    -> Inductors: In some cases, inductors might be used to correct a leading power factor caused by capacitive loads.
+
+    -> Active PFC Circuits: These are electronic circuits that dynamically adjust the power factor. They are often used in modern 
+                            power supplies to correct power factor across a range of operating conditions and load variations.
+
+    -> Synchronous Motors: These motors can also be used to improve power factor by operating at a leading power factor.
+
+Q.7 What is phase unbalance? How is that fixed?
+ans Phase unbalance occurs in three-phase electrical systems when the voltage and current in the three phase are not equal. 
+    This condititon can lead to inefficiences, overheating and potential damage to electrical equipment. It is often characterized
+    by a significant difference in the magnitudes of the phase voltages and currents.
+
+    Causes of phase unbalance:
+    1. Unequal Load Distribution - when the load connected to each phase are not equal, phase unbalance occurs.
+    2. Faulty equipment - malfunctioning equipement or components can lead to phase unbalance.
+    3. Electrical Supply Issues - imbalances in the supply voltages from utilities can cause phase unbalance.
+
+    Effects of phase unbalance:
+    1. Overheating - equipement may overheat due to uneven current distribution.
+    2. Reduced efficiency - system operates less efficiently, leading to higher energy consumption.
+    3. Potential Damage - prolonged phase unbalance can damage motors and other electrical equipment.
+
+    Fixing Phase unbalance:
+    1. Load balancing - distribute the electrical loads evenly across the three phases. This is often the most effective
+                        method for addressing the phase unbalance in a system.
+    2. Check and Repair equipement - Inspect and repair or replace faulty equipement that may be causing imbalances.
+                                     This includes checking for loose connections and faulty components.
+    3. Use phase Balancers - use of phase balancers and phase shifters can be used to correct phase imbalances.
+    4. Upgrade Supply Infrastructure - if the phase unbalance is due to issues with power supply, work with the utility 
+                                       provider to address and correct supply related issues.
+    5. Voltage regulators -  install voltage regulators to stabilize and balance the voltage levels across phases.
+    
