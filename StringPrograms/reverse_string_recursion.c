@@ -1,3 +1,5 @@
+/** Reverse a string using recursion method */
+
 #include <stdio.h>
 
 void print_reverse(char* s)
