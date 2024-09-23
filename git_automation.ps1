@@ -11,7 +11,7 @@ git add .
 git commit -m $commitMessage
 
 # Pull the latest changes from the remote repository to avoid conflicts
-#git pull origin dev
+git pull origin dev
 
 # Push the changes to the remote repository
 git push origin dev
