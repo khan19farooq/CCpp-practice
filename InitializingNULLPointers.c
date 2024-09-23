@@ -1,3 +1,4 @@
+/** Program to initialize a NULL pointer */
 #include <stdio.h>
 
 int main()
@@ -6,7 +7,8 @@ int main()
 
     // Simulate some condition that causes data to be allocated
 
-    int condition = 0;
+    int condition = 0; // If condition = 1, then data will be allocated currently is 0 so no data will be allocated.
+    
     if (condition)
     {
         static int memory = 100;
