@@ -4,18 +4,10 @@
 
 bool checkBufferForNULL(void **buffer, size_t length) {
     // Iterate through each element in the buffer
-<<<<<<< HEAD
     for (size_t i = 0; i < length; i++) 
         if (buffer[i] == NULL)
             return true; // Return true if a NULL pointer is found
         
-=======
-    for (size_t i = 0; i < length; i++) {
-        if (buffer[i] == NULL) {
-            return true; // Return true if a NULL pointer is found
-        }
-    }
->>>>>>> a41a140868457b0e304f825c6b303dbc52e6d81a
     return false; // Return false if no NULL pointers are found
 }
 
@@ -38,23 +30,3 @@ int main() {
 
     return 0;
 }
-<<<<<<< HEAD
-=======
-
-/*
-int checkBufferforNULL(void *p1[],int length);// declaration
-
-int checkBufferforNULL(void *p1[],int length)// function definition
-{
-    for (int i = 0; i < length; i++)
-    {
-        if(p1[i] == NULL) 
-        return true;
-        else 
-        return false;
-    }
-
-}
-checkBufferforNULL(); // calling the function
-*/
->>>>>>> a41a140868457b0e304f825c6b303dbc52e6d81a

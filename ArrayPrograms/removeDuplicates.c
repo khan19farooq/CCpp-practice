@@ -1,3 +1,5 @@
+/** Remove the duplicates in the array and return the new array without duplicates */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -23,13 +25,11 @@ int main() {
 int *removeDuplicates(int array[], int length, int *new_length) {
 
     int *new_array = malloc(length * sizeof(int));
-
     int unique_count = 0;
 
     for(int i = 0; i < length; i++) 
     {
         bool is_unique = true;
-
         for (int j = 0; j < unique_count; j++)
             if (new_array[j] == array[i])
             {

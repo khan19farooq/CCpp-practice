@@ -7,10 +7,8 @@
 
     typedef struct
     {
-
         uint8_t *data;  // Pointer to the actual bitmap array
         size_t size;    // Number of bits in the bitmap
-    
     }Bitmap;
     
     /** We created structure data type. Structure is a user-defined data type 

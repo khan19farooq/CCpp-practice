@@ -1,4 +1,4 @@
-/** Program to initialize a NULL pointer */
+/** Program for how to initialize a NULL pointer */
 #include <stdio.h>
 
 int main()

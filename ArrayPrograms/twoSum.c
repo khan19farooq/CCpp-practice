@@ -30,7 +30,6 @@ int main ()
     int numbers[] = {2, 7, 11, 15};
 
     int target = 9;
-
     int returnSize;
     
     int* result = twoSum(numbers, 4, target, &returnSize);
