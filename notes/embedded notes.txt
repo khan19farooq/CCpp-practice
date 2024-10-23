@@ -512,3 +512,11 @@ Ans I am particularly drawn to Cummins because of its reputation as a leader in 
     power solutions. The company's commitment to reducing emissions and advancing clean energy technologies
     resonates deeply with my professional and personal values. I am passionate about contributing to a 
     future where power generation is both efficient and environmentally responsible.
+
+--------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+To learn:
+
+Specializing in optimizations for code size, execution speed, memory usage, task scheduler and 
+interrupt controlling, exception handling, and power management. 
+
