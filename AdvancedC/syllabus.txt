@@ -1,0 +1,37 @@
+Advanced C - syllabus
+
+* The C Language
+* C Program Compilation
+* Execution Process
+* Tokens of C program 
+* C - Instructions
+* Constants, Variables
+* Identifiers and Keywords
+* Primitive Data types
+* Structures - The definition
+* Structures - Declaration & Type
+* Accessing elements of Structure
+* Range of signed/unsigned data types
+* Efficient way of printing pointer
+* Compiler Memory Allocation for Data-types
+* Compiler Memory Allocation for Structures
+* Data type Alignments
+* Compiler Memory Allocation for Unions
+* Union - Data Corruption
+* Practical Usage of Unions
+* Practical usage of Bitfields
+* Bitfields Overflow
+* Printing every byte of an integer
+* Enumeration 
+* Typedef statements
+* Practical example of Typedef Usage
+* typedef'ing in a function pointer
+* Bit-Fields in Structure
+* Practical example of Bitfield Usage
+* Structure Padding & Pitfalls
+* Programming Model & Memory Usage 
+---------------------------------------------
+* Why sizeof Int and Long is 4 or 8?
+* Use of long long in 32-bit architecture
+* Practical Example of long long
+* IA-32, IA-64, ILP-32, LP64, x86-64

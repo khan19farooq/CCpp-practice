@@ -15,6 +15,7 @@ int* twoSum(int* numbers, int numbersSize, int target, int* returnSize) {
             result[0] = left + 1;
             result[1] = right + 1;
             return result;
+            
         } else if (sum < target) {
             left++; // Increase the sum by moving the left pointer to right
         } else {

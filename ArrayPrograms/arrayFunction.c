@@ -3,17 +3,23 @@
 #include <stdlib.h>
 
 
-// Start function declarations
-int find_max(int myArray [], int length);
+/** Start function declarations */
+int find_max(int myArray [], int length); // Maxmum element in an array
+
 int find_min(int myArray [], int length);
 
 int to_find = 5;
 int count_occurences(int myArray [], int length);
 
 void reverse_array(int myArray[], int length);
+
 void sum(int myArray[], int length);
+
 void avg(int myArray[], int length);
+
 int *array_copy(int *array, int length);
+
+void separateEvenOdd(int myarray[], int length);
 // End function declarations
 ///////////////////////////////////////////////////////////////////////
 
@@ -29,12 +35,14 @@ int myArray [] = { 2, 5, 5, 1, 8, 0 };
 //reverse_array(myArray, 6);
 //sum(myArray,6);
 avg(myArray,6);
-
+separateEvenOdd(myArray, 6);
 /**  Start - Function call to copy the array of elements */
-int a1[] = {1, 2, 4, 4, 5};
+/* int a1 [] = {1, 2, 4, 4, 5};
+
 int *a1_copy = array_copy(a1, 5);
+
 for (int i = 0; i < 5; i++)
-    printf("a1_copy[%d] = [%d]\n", i, a1_copy[i]);
+    printf("a1_copy[%d] = [%d]\n", i, a1_copy[i]); */
 
 /* Output */
 //printf("maximum number in myArray = %d\n",max);
@@ -148,4 +156,34 @@ int *array_copy(int *array, int length)
         c[i] = array[i];
     
     return c;
+}
+
+void separateEvenOdd (int myarray[], int length)
+{
+    int evenArray[length], j = 0;
+    int  oddArray[length], k = 0;
+    
+    for (int i = 0; i < length; i++)
+    {
+        if (myarray[i] % 2 == 0)
+        {
+            evenArray[j] = myarray[i];
+            j++;
+        } else {
+            oddArray[k] = myarray[i];
+            k++;
+        }
+    }
+
+    printf("Even elements are: ");
+    for (int i = 0; i < j; i++)
+        printf("%d ", evenArray[i]);
+    
+    printf("\n\n");
+
+    printf("Odd elements are: ");
+    for (int i = 0; i < k; i++)
+        printf("%d ", oddArray[i]);
+    
+    
 }

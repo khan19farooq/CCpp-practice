@@ -1,0 +1,36 @@
+The C language - 
+
+* C is a robust language whose rich set of operators and functions can be used to write any simple to complex program.
+* C compiler allows to write both "assembly language programming" along with "C programming code" and this allows to 
+  write both system and application software(business packages).
+* Programs written in c are efficient and fast.
+
+C Program Compilation and Execution Process -
+
+* The source of a C program is stored in a file with .c extension name.
+* On Compilation it produces object code. 
+* This object file is linked by linker (either static and dynamic) and a binary executable code is generated.
+* The default binary output is named as a.exe on windows environments. So, type a.exe and run it. 
+
+C Program -
+
+* Any C program is basically a collection of functions that are supported by the C library. User defined functions can be
+  created and added to the C library, if needed.
+* The main () function is a special function used by the C language to instruct the platform/computer where the program starts.
+* The set of statements belonging to a function are enclosed within a pair of braces, {}.
+* Any variable used in the program must be declared before using it. For ex, use variables of a function right before starting the function.
+* C program variables are generally written in lowercase letters (or CamelCase).
+* Statements are terminated by a semicolon.
+* Uppercase letters are used only for symbolic constants.
+
+Constants, Variable, Identifiers and Keywords -
+
+* Constants - they do not change during the execution of a program. 
+* Variables - they change during the execution of a program.
+* Identifiers -  they are user defined names given to variables, functions, pointers and arrays.
+* Keywords - they are well known words whose meaning has already been explained to the compiler.
+
+
+
+
+

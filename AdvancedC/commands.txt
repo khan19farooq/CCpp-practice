@@ -1,0 +1,7 @@
+Command learned(bash/linux)-
+
+pwd                      - print current working directory
+cat filename.c           - concatenates files together
+ls -l                    - lists the contents of your working dir
+cc filename.c            - compile the filename.c file and create the default executable output file, a.exe
+cc -[options] filename.c - compiler only looking for filename.c

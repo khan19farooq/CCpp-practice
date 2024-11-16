@@ -1,0 +1,33 @@
+C data types --
+
+Data type is the information about the type of data to be stored in a particular memory address. 
+Data types can be classified into 3 categories-
+1. Primitive data types - char, short, int, long, float, double, void 
+   **Integral, real and character types can be signed or unsigned.
+2. User defined data types - 
+3. Derived/Depenedent data type - 
+
+Always type cast the malloc, because the malloc is void return type. See below:
+Ex: char *p = (char *) malloc(50); // same data type both sides
+-----------------------------------------------------------------------------------------------------------
+Q.1 Which data type is the most suitable to store the size of a hard disk partition (10 GB partition size)?
+a. int          b. unsigned int        c. long        d. unsigned long
+ans d. unsigned long
+
+Explanation:
+
+10 GB of storage partition
+int, long, unsigned int, unsigned long
+
+(The below explanation is not c code it is just an explanation)
+int sizeofdisk; -> unsigned 
+sizeofdisk = 10 GB = 10 * 1024 * 1024 * 1024;
+1KB = 1024;
+1MB = 1024;
+1GB = 1024; 
+Integer: 4 bytes: 32-bits: 2^32-1  // (msb)11111111 11111111 11111111 11111111 (lsb)
+2 ^ 32 = 2^2 * 2^30 = 4 * 2^10 * 2^10 * 2^10 = 4 * KB * KB * KB = 4 GB 
+(4 GB is less than 10 GB so no unsigned int)
+Therefore, we go for unsigned long which is 8 bytes or 64 bits.
+
+-----------------------------------------------------------------------------------------------------------
